@@ -9,6 +9,8 @@
 @import "basics/base.scss";
 @import "basics/links.scss";
 @import "basics/buttons.scss";
+@import "basics/typography.scss";
 
 // Components
-@import "components/kitten_card.scss";
+@import "components/main-header.scss";
+@import "components/cat-card.scss";

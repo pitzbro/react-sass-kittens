@@ -1,29 +1,24 @@
-/* Breakpoint mixins */
-
-$mobile-breakpoint: 460px;
-$narrow-breakpoint: 660px;
-$normal-breakpoint: 790px;
-
-@mixin for-mobile-layout {
-    @media (max-width: $mobile-breakpoint) {
-        @content;
+.container {
+    // max-width: $normal-breakpoint;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    @include for-narrow-layout {
+        max-width: $mobile-breakpoint;
+    }
+    @include for-normal-layout {
+        max-width: $narrow-breakpoint;
+    }
+    @include for-wide-layout {
+        max-width: $normal-breakpoint;
     }
 }
 
-@mixin for-narrow-layout {
-    @media (min-width: $mobile-breakpoint) {
-        @content;
-    }
-}
+// GRIDS
 
-@mixin for-normal-layout {
-    @media (min-width: $narrow-breakpoint) {
-        @content;
-    }
-}
-
-@mixin for-wide-layout {
-    @media (min-width: $normal-breakpoint) {
-        @content;
-    }
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 10px;
 }
