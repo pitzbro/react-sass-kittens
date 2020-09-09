@@ -1,6 +1,14 @@
 .main-header {
-    height: 88vh;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    min-height: 90vh;
     .logo {
-        width: 350px;
+        max-width: 350px;
     }
 }
