@@ -1,14 +1,28 @@
 .main-header {
-
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 35% 50%;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    grid-gap: 0 2rem;
+    position: relative;
 
+    height: 100vh;
 
-    min-height: 90vh;
     .logo {
-        max-width: 350px;
+        grid-row: span 3;
+    }
+
+    > *:not(.logo) {
+        grid-column: 2;
+    }
+
+    &::after {
+        content: "⌄";
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        font-size: 4.25rem;
+        transform: translateX(-50%);
+        color: $clr1;
     }
 }

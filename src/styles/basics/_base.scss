@@ -8,31 +8,30 @@
 }
 
 html {
-    font-family: montserrat;
+    font-family: 'montserrat', sans-serif;
     line-height: 1.6;
     color: $clr2;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-size: rem(18px);
     margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: caveat;
-    margin: 0 0 0.6em;
-    line-height: 1;
-}
-
-h1 {
-    font-size: rem(68px);
 }
 
 img {
     width: 100%;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: caveat, serif;
+    margin: 0 0 0.4em;
+    line-height: 0.9;
+}
+
+h1 {
+    font-size: rem(68px);
+}
+
 p {
-    margin: 0 0 1em;
-    max-width: 40ch;
+    margin: 0 0 2em;
 }
