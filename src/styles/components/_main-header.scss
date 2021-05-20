@@ -1,28 +1,27 @@
 .main-header {
-    display: grid;
-    grid-template-columns: 35% 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    grid-gap: 0 2rem;
-    position: relative;
+    grid-column: 1 /-1;
 
-    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 10%,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(255, 255, 255, 1) 100%
+    );
 
     .logo {
-        grid-row: span 3;
+        width: rem(330px);
+        transform: rotate(350deg);
+        mix-blend-mode: multiply;
     }
 
-    > *:not(.logo) {
-        grid-column: 2;
-    }
-
-    &::after {
-        content: "⌄";
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        font-size: 4.25rem;
-        transform: translateX(-50%);
-        color: $clr1;
+    p {
+        max-width: 44ch;
+        margin: 0 0 1em;
     }
 }

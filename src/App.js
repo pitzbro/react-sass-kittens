@@ -8,7 +8,7 @@ function CatCard(props) {
   return (
     <section className="card-cat card">
     <img className="cat-image" alt="cat" src={"https://cataas.com/cat/" + tags[props.tagNum]}/>
-    <div className="cat-tag flex justify-center align-center">{tags[props.tagNum]}</div>
+    <div className="cat-tag">{tags[props.tagNum]}</div>
   </section> 
 
   );
