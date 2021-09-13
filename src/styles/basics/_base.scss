@@ -9,15 +9,15 @@
 
 html {
     font-family: montserrat, sans-serif;
-    font-size: rem(18px);
+    line-height: 1.75;
     color: $clr2;
-    line-height: 1.6;
 }
 
 body {
     margin: 0;
     background-image: url(../../images/cats-pattern-background_1425-90.jpg);
-    background-size: 116px;
+    background-size: 40%;
+    background-attachment: fixed;
 }
 
 img {
@@ -25,15 +25,17 @@ img {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: caveat, sans-serif;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0 0 0.6em;
+    font-weight: 400;
+    font-family: caveat, serif;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
 }
 
 h1 {
-    font-size: rem(65px);
+
 }
 
 p {
+    margin: 0 0 2rem;
+    max-width: 46ch;
 }

@@ -18,7 +18,7 @@ function CatCard(props) {
 function App() {
   return (
     <div className="app main-container app-container">
-      <header className="main-header header-layout" id="nav">
+      <header className="main-header header-layout full main-container" id="nav">
         <img className="logo" alt="logo"src={logo} />
         <h1>My cat website</h1>
         <p>We’re all cat lovers. That’s why we’re here. But have you ever stopped to wonder why we find cats so incredible loveable?</p>
