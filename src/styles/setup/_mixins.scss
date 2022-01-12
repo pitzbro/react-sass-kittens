@@ -1,28 +1,35 @@
-/* Breakpoint mixins */
+/* Media queries Breakpoint mixins */
 
 @mixin for-mobile-layout {
-    @media (max-width: $mobile-breakpoint) {
-        @content;
+    @media (max-width: $padded-break-narrow) {
+      @content;
     }
-}
-
-@mixin for-narrow-layout {
-    @media (min-width: $mobile-breakpoint) {
-        @content;
+  }
+  
+  @mixin for-narrow-layout {
+    @media (min-width: $padded-break-narrow) {
+      @content;
     }
-}
-
-@mixin for-normal-layout {
-    @media (min-width: $narrow-breakpoint) {
-        @content;
+  }
+  
+  @mixin for-normal-layout {
+    @media (min-width: $padded-break-normal) {
+      @content;
     }
-}
-
-@mixin for-wide-layout {
-    @media (min-width: $normal-breakpoint) {
-        @content;
+  }
+  
+  @mixin for-wide-layout {
+    @media (min-width: $padded-break-wide) {
+      @content;
     }
-}
+  }
+  
+  @mixin layoutGTC($max) {
+    grid-template-columns:
+      minmax($layoutPadding, 1fr)
+      minmax(auto, $max)
+      minmax($layoutPadding, 1fr);
+  }
 
 /* Media  Mixins */
 @mixin aspect-ratio($width, $height) {
